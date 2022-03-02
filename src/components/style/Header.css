@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header__logo img {
+    width: 40px;
+}
+
+/* this will be active, will be visible on screen 
+from 50em of our screen 
+50 em roughly equals to 850 pixels*/
+/* padding inline is just place from left and the right side equally */
+/* padding block is just place from top and bottom equally */
+/* the color of var(--blur) from App.css */
+@media (min-width:50em) {
+    .list__items {
+        display: flex;
+        padding-inline: 2rem;
+        padding-block: 1.5rem;
+        gap: 3rem;
+        list-style: none;
+        background: var(--blur);
+        backdrop-filter: blur(.3rem);
+        margin: 0;
+    }
+
+    /* menghilangkan menu & close icon ketika screen full */
+    .menu__icon {
+        display: none;
+    }
+
+    .close__icon {
+        display: none;
+    }
+} 
+
+.list__items li a {
+    text-decoration: none;
+    color: var(--main-white);
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+@media (max-width:50em) {
+    .list__items {
+        display: flex;
+        flex-direction: column; /*dr 1 baris menjadi beberapa kolom ke bawah*/
+        position: fixed;
+        inset: 0 0 0 40%; /*top bottom right left side*/
+        align-items: center;
+        justify-content: center;
+        gap: 3rem; /*jarak kolom kebawah*/
+        list-style: none;
+        background: linear-gradient(100deg, var(--glass));
+        z-index: 999; /*transparent*/
+        transform: translate(100%); /*agar close icon bekerja*/
+        transition: 450ms; /*ketika close icon di klik*/
+    }
+
+    .list__items.active {
+        transform: translate(0);
+        transition: 450ms; /*ketika menu icon di klik*/
+    }
+
+    .menu__icon {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+        color: var(--main-white);
+        cursor: pointer;
+
+    }
+
+    .menu__icon .menu {
+        font-size: 40px;
+
+    }
+    .close__icon {
+        color: var(--main-white);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,70 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+--main-white: #fff;
+--pink:rgb(218, 129, 129);
+--glass-gray:hsla(0, 45%, 98%, 0.379);
+--img-back:rgba(0, 0, 0, 0.543),rgba(0, 0, 0, 0.502);
+--glass-white:rgba(106, 101, 101, 0.214),rgba(112, 107, 112, 0.344);
+--glass-secondary:rgb(87, 10 ,94),rgb(143, 64, 50);
+--glass-third:rgb(87, 10 ,94),rgb(1, 109, 209);
+--glass:rgb(113, 35, 185),rgb(5, 55, 102);
+--glass-before:rgba(16, 15, 15, 0.146);
+--p-status:rgb(136, 135, 135);
+--blur:hsla(0, 0%, 100%, 0.03);
+--blur-small:hsla(0, 0%, 100%, 0.2);
+--secondary-cards:hsla(0, 5%, 66%, 0.16);
+}
+
+*::after,*::before {
+  box-sizing: border-box;
+}
+
+/*our image won't exceed hundred percent of its width*/
+img, picture {
+  max-width: 100%;
+}
